@@ -3,10 +3,12 @@ Transaction.delete_all
 Bank.delete_all
 
 
-u1 = User.create(name: 'user1', email: 'user1@gmail.com', password: 'a', password_digest: 'a' )
-u2 = User.create(name: 'user2', email: 'user2@gmail.com', password: 'a', password_digest: 'a' )
-u3 = User.create(name: 'user3', email: 'user3@gmail.com', password: 'a', password_digest: 'a' )
-u4 = User.create(name: 'admin', email: 'admin@gmail.com', password: 'a', password_digest: 'a', is_admin: true )
+u1 = User.create(name: 'user1', email: 'user1@gmail.com', password: 'a', password_confirmation: 'a' )
+u2 = User.create(name: 'user2', email: 'user2@gmail.com', password: 'a', password_confirmation: 'a' )
+u3 = User.create(name: 'user3', email: 'user3@gmail.com', password: 'a', password_confirmation: 'a' )
+u4 = User.create(name: 'admin', email: 'admin@gmail.com', password: 'a', password_confirmation: 'a' )
+u4.is_admin
+u4.save
 
 b1 = Bank.create(name: 'bank1', balance: 2000)
 b2 = Bank.create(name: 'bank2', balance: 1000)
