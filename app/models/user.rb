@@ -13,6 +13,9 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation, :is_admin, :balance
+  attr_accessible :name, :email, :password, :password_confirmation, :balance
+  has_secure_password
   has_many :banks, :inverse_of => :user
+  validates :name, :email, :password, :password_confirmation, :balance, :presence => true
+  validates :balance, :numericality => true
 end
