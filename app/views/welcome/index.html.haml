@@ -7,8 +7,10 @@
 #allbalances
   = render(:partial => 'allbalances')
 
-
-
+- if flash[:message].present?
+  .row
+    .large-12.columns.alert-box.alert
+      = flash[:message]
 
 
 
