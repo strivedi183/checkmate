@@ -1,0 +1,29 @@
+/ %script
+/  var chart = {};
+
+/ - if @auth.present?
+/   - @auth.banks.order(:name).each do |bank|
+/     %script
+/       = bank.name
+
+
+#donut-example
+
+/ %script
+/  = "#{}"
+
+
+:javascript
+  Morris.Donut({
+    element: 'donut-example',
+    data: [
+      {label: "Download Sales", value: 400},
+      {label: "In-Store Sales", value: 12},
+      {label: "Mail-Order Sales", value: 200}
+    ]
+  });
+
+
+
+
+
