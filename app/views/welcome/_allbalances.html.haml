@@ -10,7 +10,7 @@
 
     - @auth.banks.order(:name).each do |bank|
       %tr
-        %td= bank.name
+        %td= link_to(bank.name, bank)
         %td= bank.balance
 
       %script
