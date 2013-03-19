@@ -12,7 +12,7 @@ describe 'Users' do
   end
 
   describe 'GET /users/new' do
-    it 'displays the new user form', :js => true do
+    it 'displays the new user form' do
       visit root_path
       click_link('Register')
       page.should have_button('Create User')
