@@ -1,6 +1,9 @@
-%h3 NEW BANK FORM
-
-= form_for @bank, :remote => true do
-  = f.label :name
-  = f.text_field :name
-  = f.submit
+.row
+  .large-4.columns
+    = form_for @bank, :remote => true do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :balance
+      = f.text_field :balance
+      = f.submit :class => 'button tiny success'
+  .large-8.columns

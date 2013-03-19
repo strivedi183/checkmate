@@ -7,3 +7,15 @@ class Checkmate
     $('#form').empty()
 
 $(document).ready(Checkmate.document_ready)
+
+
+
+Morris.Donut({
+  element: 'donut-example',
+  data: [
+    {label: "Download Sales", value: 400},
+    {label: "In-Store Sales", value: 12},
+    {label: "Mail-Order Sales", value: 200}
+  ]
+});
+
