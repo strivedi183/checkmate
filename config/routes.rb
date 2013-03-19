@@ -7,5 +7,6 @@ Checkmate::Application.routes.draw do
 
   resources :banks, :only => [:new, :create, :show]
 
+  resources :users, :only => [:new, :create]
 
 end
