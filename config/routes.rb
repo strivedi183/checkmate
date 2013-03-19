@@ -5,7 +5,7 @@ Checkmate::Application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  resources :banks, :only => [:new, :create]
+  resources :banks, :only => [:new, :create, :show]
 
 
 end
