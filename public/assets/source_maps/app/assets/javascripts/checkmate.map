@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "checkmate.js",
+  "sourceRoot": "",
+  "sources": [
+    "checkmate.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;CAAA,KAAA,GAAA;CAAA;CAAA,CAAM;CACL;CAAA;;CAAA,EAAkB,CAAjB,KAAC,KAAD;CACE,CAAA,KAAA,EAAsD,CAAtD,GAAA,OAAA;CADH,IAAkB;;CAAlB,EAGc,CAAb,KAAC,CAAD;CACE,KAAA,QAAA;CACA,IAAA,EAAA,MAAA;CALH,IAGc;;CAHd;;CADD;;CAAA,CAQA,GAAA,GAAA,CAA2B,KAA3B;CARA"
+}
