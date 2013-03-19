@@ -2,7 +2,14 @@
 
 #form
 
-= render(:partial => 'banks/chart')
+- if @auth.present?
+  %h3 FUCKING BANKS TABLZ YO
+
+  #banks
+    =render(:partial => 'banks/banks')
+
+    = render(:partial => 'banks/chart')
+
 
 
 
