@@ -1,7 +1,6 @@
-%script
-  var mybanks = [];
-
 - if @auth.present?
+  %script
+    var mybanks = [];
   - @auth.banks.order(:name).each do |bank|
     = bank.name
     = bank.balance

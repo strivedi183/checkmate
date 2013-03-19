@@ -8,7 +8,8 @@ class BanksController < ApplicationController
   end
 
   def create
-    Bank.create(params[:bank])
+    bank = Bank.create(params[:bank])
+    @auth.banks << bank
     @banks = @auth.banks.order(:name)
   end
 
