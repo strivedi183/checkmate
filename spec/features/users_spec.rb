@@ -1,0 +1,19 @@
+require 'spec_helper'
+
+describe 'Users' do
+
+  describe 'GET /' do
+    it 'displays register link' do
+      visit root_path
+      page.should have_link('Register')
+    end
+  end
+
+  describe 'GET /users/new' do
+    it 'displays the new user form', :js => true do
+      visit root_path
+      click_link('Register')
+      page.should have_button('Create User')
+    end
+  end
+end
