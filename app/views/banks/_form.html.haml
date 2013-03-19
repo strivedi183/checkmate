@@ -1,1 +1,6 @@
 %h3 NEW BANK FORM
+
+= form_for @bank, :remote => true do
+  = f.label :name
+  = f.text_field :name
+  = f.submit

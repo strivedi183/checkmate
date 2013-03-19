@@ -1,3 +1,5 @@
 %h1 WELCOME/INDEX
 
+- if @auth.present?
+  = link_to('Add Bank', new_bank_path, :remote => true, :class => 'button tiny' )
 #form
