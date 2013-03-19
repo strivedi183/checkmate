@@ -18,5 +18,6 @@ FactoryGirl.define do
     email                    'user@gmail.com'
     password                 'a'
     password_confirmation    'a'
+    balance                  500
   end
 end

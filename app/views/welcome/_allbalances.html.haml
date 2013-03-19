@@ -19,9 +19,9 @@
         = "#{bank.name}['value'] = #{bank.balance};"
         = "mybanks.push(#{bank.name});"
 
-:javascript
-  Morris.Donut({
-    element: 'chart',
-    data: mybanks
-  });
+  :javascript
+    Morris.Donut({
+      element: 'chart',
+      data: mybanks
+    });
 

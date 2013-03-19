@@ -11,8 +11,10 @@
   #totalbalance
     =render(:partial => 'totalbalance')
 
-
-
+- if flash[:message].present?
+  .row
+    .large-12.columns.alert-box.alert
+      = flash[:message]
 
 
 
