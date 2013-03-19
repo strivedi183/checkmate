@@ -1,11 +1,14 @@
-%h1 WELCOME/INDEX
+%h1 My Balances:
 
 #form
 
-#chart
-  = render(:partial => 'chart')
-#allbalances
-  = render(:partial => 'allbalances')
+.row
+  #chart.large-6.columns
+    = render(:partial => 'chart')
+  #allbalances.large-6.columns
+    = render(:partial => 'allbalances')
+
+
 
 - if flash[:message].present?
   .row
