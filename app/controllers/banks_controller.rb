@@ -17,7 +17,7 @@ class BanksController < ApplicationController
     bank_from = Bank.find(params[:bank_from])
     bank_to = Bank.find(params[:bank_to])
     transaction = params[:transaction].to_f
-    if bank_from.balance >= transaction
+    if bank_from != bank_to && bank_from.balance >= transaction
       bank_from.balance -= transaction
       bank_to.balance += transaction
     end
