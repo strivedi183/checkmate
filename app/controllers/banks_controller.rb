@@ -17,6 +17,10 @@ class BanksController < ApplicationController
     @bank = Bank.find(params[:id])
   end
 
+  def transfer
+    binding.pry
+  end
+
   def xfer
     bank_from = Bank.find(params[:bank_from])
     bank_to = Bank.find(params[:bank_to])
