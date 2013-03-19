@@ -13,6 +13,10 @@ class BanksController < ApplicationController
     @banks = @auth.banks.order(:name)
   end
 
+  def show
+    @bank = Bank.find(params[:id])
+  end
+
   def transact
   end
 end

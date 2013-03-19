@@ -1,0 +1,10 @@
+.row
+  .large-9.columns
+    = form_for @transaction, :remote => true do |f|
+      = f.label :amount
+      = f.text_field :amount, :autofocus => true
+      = f.label :transaction_type
+      = f.text_field :transaction_type
+      = f.submit :class => 'button success'
+      = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
+  .large-3.columns
