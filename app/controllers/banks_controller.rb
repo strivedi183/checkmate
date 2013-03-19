@@ -19,7 +19,9 @@ class BanksController < ApplicationController
     transaction = params[:transaction].to_f
     if bank_from != bank_to && bank_from.balance >= transaction
       bank_from.balance -= transaction
+      bank_from.save
       bank_to.balance += transaction
+      bank_to.save
     end
     flash[:message] = "You transferred #{transaction} from #{bank_from.name} to #{bank_to.name}"
     redirect_to(root_path)
