@@ -1,0 +1,4 @@
+- if @auth.present?
+  - @auth.banks.order(:name).each do |bank|
+    = bank.name
+    = bank.balance
