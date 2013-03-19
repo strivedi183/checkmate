@@ -1,4 +1,6 @@
 require 'spec_helper'
+require 'features/shared/login_helper'
+include LoginHelper
 
 describe 'Welcome' do
   describe 'GET /' do
@@ -25,7 +27,7 @@ describe 'Welcome' do
       expect(page.has_link?(user.name)).to be true
       page.should_not have_link('Login')
       visit root_path
-      expect(page.has_link?(user.username)).to be true
+      expect(page.has_link?(user.name)).to be true
       page.should_not have_link('Login')
     end
     it 'does not log the user into the system if credentials are incorrect', :js => true do
