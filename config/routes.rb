@@ -8,9 +8,14 @@ Checkmate::Application.routes.draw do
   resources :transactions, :only => [:new, :create]
   resources :banks, :only => [:new, :create, :show]
 
+  resources :banks, :only => [:new, :create] do
+    collection do
+      get :transfer
+      post :xfer
+    end
+  end
+
 
   resources :users, :only => [:new, :create]
-
-
 
 end
