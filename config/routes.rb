@@ -6,9 +6,8 @@ Checkmate::Application.routes.draw do
   delete '/login' => 'session#destroy'
 
   resources :transactions, :only => [:new, :create]
-  resources :banks, :only => [:new, :create, :show]
 
-  resources :banks, :only => [:new, :create] do
+  resources :banks, :only => [:new, :create, :show] do
     collection do
       get :transfer
       post :xfer
