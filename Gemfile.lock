@@ -57,7 +57,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.6.1)
+    coffee-script-source (1.6.2)
     columnize (0.3.6)
     database_cleaner (0.9.1)
     debug_inspector (0.0.2)

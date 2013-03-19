@@ -1,14 +1,23 @@
 - if @auth.present?
   %script
     var mybanks = [];
-  - @auth.banks.order(:name).each do |bank|
-    = bank.name
-    = bank.balance
-    %script
-      = "var #{bank.name} = {};"
-      = "#{bank.name}['label'] = '#{bank.name}';"
-      = "#{bank.name}['value'] = #{bank.balance};"
-      = "mybanks.push(#{bank.name});"
+
+
+  %table
+    %thead
+      %th Bank Name
+      %th Balance
+
+    - @auth.banks.order(:name).each do |bank|
+      %tr
+        %td= bank.name
+        %td= bank.balance
+
+      %script
+        = "var #{bank.name} = {};"
+        = "#{bank.name}['label'] = '#{bank.name}';"
+        = "#{bank.name}['value'] = #{bank.balance};"
+        = "mybanks.push(#{bank.name});"
 
 :javascript
   Morris.Donut({
