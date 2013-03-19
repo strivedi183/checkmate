@@ -4,11 +4,12 @@
      <ul class="button-group">
       <% if @auth.present? %>
        <li><%= link_to('Add Bank', new_bank_path, :remote => true, :class => 'button large' ) %></li>
+       <li><%= link_to('Transfer', transfer_banks_path, :class => 'button large') %>
       <% end %>
        <li><%= link_to('Home', root_path, :class => 'button large') %></li>
        <%== login_nav %>
       </ul>
     </div>
-    <h2 class='subheader'>HEADER HERE</h2>
+    <h2 class='subheader'>$avings</h2>
   </div>
 </div>
