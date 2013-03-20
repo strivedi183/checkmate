@@ -8,4 +8,5 @@
 //= require 'accounting.min.js'
 //= require 'backstretch.js'
 //= require 'checkmate.js'
+//= require dataTables/jquery.dataTables
 //= require 'foundation/js/foundation/foundation.forms.js'

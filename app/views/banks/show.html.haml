@@ -2,3 +2,17 @@
 = link_to('New Transaction', new_transaction_bank_path, :remote => true, :class => 'button large' )
 
 #form
+
+#inserttable
+  =render(:partial => 'datatable')
+
+
+
+
+
+
+
+:javascript
+  $(document).ready(function() {
+      $('#datatable').dataTable();
+  } );

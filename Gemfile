@@ -5,7 +5,8 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
-
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'jquery-ui-rails'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
