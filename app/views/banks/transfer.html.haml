@@ -2,13 +2,23 @@
 
 .row
   .large-5.columns
-    = form_tag '/banks/xfer' do
-      = label_tag 'Bank From: '
-      = select_tag "bank_from", options_from_collection_for_select(@auth.banks, "id", "name")
-      = label_tag 'Bank To: '
-      = select_tag "bank_to", options_from_collection_for_select(@auth.banks, "id", "name")
+    = form_tag '/banks/xfer', :class => 'custom' do
+      #cusomeDropDown
+        = label_tag 'Bank From: '
+        = select_tag "bank_from", options_from_collection_for_select(@auth.banks, "id", "name"), :class => 'medium'
+        = label_tag 'Bank To: '
+        = select_tag "bank_to", options_from_collection_for_select(@auth.banks, "id", "name"), :class => 'medium'
       = label_tag 'Transfer Amount: '
       = text_field_tag :transaction
       = submit_tag 'Make Transaction', :class => 'button radius success'
-      = link_to('Cancel', '#', :class => 'button radius alert')
+      = link_to('Cancel', root_path, :class => 'button radius alert')
   .large-7.columns
+
+
+%form.custom
+  %label{:for => "customDropdown"} Medium Example
+  %select#customDropdown
+    %option{:disabled => ""} This is a dropdown
+    %option This is another option
+    %option This is another option too
+    %option Look, a third option

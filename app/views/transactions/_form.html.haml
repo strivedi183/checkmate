@@ -1,12 +1,14 @@
 .row
   .large-9.columns
-    = form_for @transaction, :remote => true do |f|
-      = f.label :amount
-      = f.text_field :amount, :autofocus => true
-      = f.radio_button :transaction_type, 'withdrawal', :checked => true
-      = f.label :transaction_type, 'withdrawal'
-      = f.radio_button :transaction_type, 'deposit'
-      = f.label :transaction_type, 'deposit'
-      = f.submit :class => 'button success'
-      = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
+    .custom
+      = form_for @transaction, :remote => true do |f|
+        = f.label :amount
+        = f.text_field :amount, :autofocus => true
+        %span.custom.radio
+          = f.radio_button :transaction_type, 'withdrawal', :checked => true
+          = f.label :transaction_type, 'withdrawal'
+          = f.radio_button :transaction_type, 'deposit'
+          = f.label :transaction_type, 'deposit'
+        = f.submit :class => 'button success'
+        = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
   .large-3.columns

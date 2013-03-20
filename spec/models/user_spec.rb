@@ -28,5 +28,10 @@ describe User do
       user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a', balance: 'five thousand')
       expect(user.id).to be nil
     end
+
+    it 'creates a user instance' do
+      user = User.create(name: 'bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a', balance: 5000)
+      expect(user).to be_an_instance_of(User)
+    end
   end
 end
