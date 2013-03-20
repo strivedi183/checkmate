@@ -10,13 +10,8 @@
       %tbody
         - @bank.transactions.each do |transaction|
           %tr
-            %td= transaction.amount
+            %td= number_to_currency(transaction.amount)
             %td= transaction.bank.name
             %td= transaction.transaction_type
             %td= transaction.from
       %tfoot
-        %tr
-          %th amount
-          %th Bank
-          %th Type
-          %th From

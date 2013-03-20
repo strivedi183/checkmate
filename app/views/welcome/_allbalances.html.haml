@@ -11,7 +11,7 @@
     - @auth.banks.order(:name).each do |bank|
       %tr
         %td= link_to(bank.name, bank)
-        %td= bank.balance
+        %td= number_to_currency(bank.balance)
 
       %script
         = "var #{bank.name} = {};"
