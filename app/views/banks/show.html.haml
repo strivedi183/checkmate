@@ -3,7 +3,8 @@
     %h3
       Bank Name:
       = @bank.name
-    = link_to('New Transaction', new_transaction_bank_path, :remote => true, :class => 'button large' )
+    = link_to('New Transaction', new_transaction_bank_path, :remote => true, :class => 'button' )
+
   .large-6.columns
     #bank_balance
       =render(:partial => 'bank_balance')
