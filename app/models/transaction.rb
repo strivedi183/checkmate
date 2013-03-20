@@ -12,7 +12,7 @@
 
 
 class Transaction < ActiveRecord::Base
-  attr_accessible :amount, :transaction_type, :bank_id
+  attr_accessible :amount, :transaction_type, :bank_id, :from
   belongs_to :bank, :inverse_of => :transactions
   validates :amount, :transaction_type, :presence => true
   validates :amount, :numericality => true
