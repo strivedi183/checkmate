@@ -1,0 +1,16 @@
+#form
+
+.row
+  #chart.large-6.columns
+    = render(:partial => 'chart')
+  #allbalances.large-6.columns
+    = render(:partial => 'allbalances')
+.row
+  #totalbalance
+    =render(:partial => 'totalbalance')
+
+- if flash[:message].present?
+  .row
+    .large-12.columns.alert-box.alert
+      = flash[:message]
+
