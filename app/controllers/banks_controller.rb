@@ -13,13 +13,15 @@ class BanksController < ApplicationController
     @banks = @auth.banks.order(:name)
   end
 
+  def transfer
+
+  end
+
   def show
     @bank = Bank.find(params[:id])
   end
 
-  def transfer
-    binding.pry
-  end
+
 
   def xfer
     bank_from = Bank.find(params[:bank_from])
