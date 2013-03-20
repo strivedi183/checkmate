@@ -16,4 +16,8 @@ class Bank < ActiveRecord::Base
   belongs_to :user, :inverse_of => :banks
   validates :name, :balance, :presence => true
   validates :balance, :numericality => true
+
+  def current_balance
+    self.balance
+  end
 end
