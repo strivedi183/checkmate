@@ -1,7 +1,13 @@
 *{
   letter-spacing: -0.05em;
 }
-
+body {
+  background: url('https://dl.dropbox.com/u/5433755/seniors/28_1bingo.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .green{
   color: #2C9454;
 }
@@ -23,10 +29,3 @@ table {
   text-align: center;
 }
 
-body {
-  background: url('https://dl.dropbox.com/u/5433755/seniors/28_1bingo.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
