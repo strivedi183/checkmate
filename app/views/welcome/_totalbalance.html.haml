@@ -1,4 +1,4 @@
-- if @auth
+- if @auth && @auth.banks.present?
   - if @auth.banks.map(&:balance).reduce(:+) > 5000
     %h2.green= "Your total deposits: "+number_to_currency(@auth.banks.map(&:balance).reduce(:+)).to_s
   - else
