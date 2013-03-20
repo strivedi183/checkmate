@@ -9,9 +9,9 @@
           %th Type
           %th From
       %tbody
-        - @bank.transactions.each do |transaction|
+        - @bank.transactions.sort.each do |transaction|
           %tr
-            %td= transaction.created_at.strftime('%B %d, %Y')
+            %td= transaction.created_at.in_time_zone("EST").strftime('%m/%d/%y, %I:%M%p')
             %td= number_to_currency(transaction.amount)
             %td= transaction.bank.name
             %td= transaction.transaction_type

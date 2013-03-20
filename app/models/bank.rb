@@ -17,7 +17,4 @@ class Bank < ActiveRecord::Base
   validates :name, :balance, :presence => true
   validates :balance, :numericality => true
 
-  def current_balance
-    self.balance
-  end
 end

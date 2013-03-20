@@ -14,7 +14,7 @@ describe 'Welcome' do
     it 'displays the Login Form', :js => true do
       visit root_path
       click_link('Login')
-      page.should have_button('Login Checkmate')
+      page.should have_button('Login $ for $')
     end
   end
 
@@ -23,7 +23,7 @@ describe 'Welcome' do
 
     it 'logs the user into the system if credentials are correct', :js => true do
       login_to_system(user)
-      page.should_not have_button('Login Checkmate')
+      page.should_not have_button('Login $ for $')
       expect(page.has_link?(user.name)).to be true
       page.should_not have_link('Login')
       visit root_path
@@ -35,8 +35,8 @@ describe 'Welcome' do
       click_link('Login')
       fill_in('Email', :with => user.email)
       fill_in('Password', :with => 'b')
-      click_button('Login Checkmate')
-      page.should have_button('Login Checkmate')
+      click_button('Login $ for $')
+      page.should have_button('Login $ for $')
     end
   end
 
@@ -45,7 +45,7 @@ describe 'Welcome' do
       visit root_path
       click_link('Login')
       click_link('Cancel')
-      page.should_not have_button('Login Checkmate')
+      page.should_not have_button('Login $ for $')
     end
   end
 end
