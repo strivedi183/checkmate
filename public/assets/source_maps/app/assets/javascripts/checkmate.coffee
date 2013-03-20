@@ -18,4 +18,5 @@ Morris.Donut({
     {label: "Mail-Order Sales", value: 200}
   ]
 });
-
+jQuery ->
+  $('#datatable').datatable()

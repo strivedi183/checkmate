@@ -1,15 +1,18 @@
-%h1 My Balances:
+.row
+  .large-8.large-centered.columns
+    #totalbalance.center-text
+      =render(:partial => 'totalbalance')
 
 #form
 
 .row
-  #chart.large-6.columns
+  #chart.large-6.large-centered.columns
     = render(:partial => 'chart')
-  #allbalances.large-6.columns
+  #allbalances.large-2.large-centered.columns
     = render(:partial => 'allbalances')
-.row
-  #totalbalance
-    =render(:partial => 'totalbalance')
+  .large-2.columns
+
+
 
 - if flash[:message].present?
   .row

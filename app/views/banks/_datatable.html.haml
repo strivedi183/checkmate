@@ -1,0 +1,22 @@
+.row
+  .large-10.large-centered.columns
+    %table#datatable.display{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+      %thead
+        %tr
+          %th amount
+          %th Bank
+          %th Type
+          %th From
+      %tbody
+        - @bank.transactions.each do |transaction|
+          %tr
+            %td= transaction.amount
+            %td= transaction.bank.name
+            %td= transaction.transaction_type
+            %td= transaction.from
+      %tfoot
+        %tr
+          %th amount
+          %th Bank
+          %th Type
+          %th From
