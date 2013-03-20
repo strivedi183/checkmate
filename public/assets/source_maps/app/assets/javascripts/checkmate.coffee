@@ -20,3 +20,5 @@ Morris.Donut({
 });
 jQuery ->
   $('#datatable').datatable()
+# $('#datatable_previous').hide();
+# $('#datatable_next').hide();

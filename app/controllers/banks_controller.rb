@@ -10,6 +10,9 @@ class BanksController < ApplicationController
   def create
     bank = Bank.create(params[:bank])
     @auth.banks << bank
+    amount = params[:bank][:balance]
+    transaction = Transaction.create(amount: amount, transaction_type: 'deposit')
+    bank.transactions << transaction
     @banks = @auth.banks.order(:name)
   end
 

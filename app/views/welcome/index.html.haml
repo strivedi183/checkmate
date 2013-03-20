@@ -1,20 +1,12 @@
 .row
-  .large-6.columns
-    #form
-  .large-7.large-centered.columns
-    #totalbalance.center-text
-      =render(:partial => 'totalbalance')
-
-#form
+  #form
+  #totalbalance.large-7.large-centered.columns
+    =render(:partial => 'totalbalance')
 
 .row
-  #chart.large-6.large-centered.columns
-    = render(:partial => 'chart')
-  #allbalances.large-2.large-centered.columns
+  #chart.large-6.columns
+  #allbalances.large-6.columns
     = render(:partial => 'allbalances')
-  .large-2.columns
-
-
 
 - if flash[:message].present?
   .row

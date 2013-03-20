@@ -1,12 +1,10 @@
-%h2 Login to Checkmate
-
 .row
-  .large-8.columns
+  .large-4.columns
     = form_tag '/login', :remote => true do
       = label_tag :email
       = text_field_tag :email, nil, :autofocus => true
       = label_tag :password
       = password_field_tag :password
-      = submit_tag 'Login Checkmate', :class => 'button radius success'
+      = submit_tag 'Login $ for $', :class => 'button radius success'
       = link_to('Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert')
-  .large-4.columns
+  .large-8.columns
