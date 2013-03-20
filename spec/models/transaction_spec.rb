@@ -26,5 +26,10 @@ describe Transaction do
       transaction = Transaction.create(amount: 'one thousand', transaction_type: 'withdrawl')
       expect(transaction.id).to be nil
     end
+
+    it 'creates a transaction instance' do
+      transaction = Transaction.create(amount: '1000', transaction_type: 'withdrawl')
+      expect(transaction).to be_an_instance_of(Transaction)
+    end
   end
 end

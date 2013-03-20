@@ -1,12 +1,14 @@
 .row
   .large-9.columns
-    = form_tag '/banks/:id/user_xfer', :remote => true do
-      = label_tag :amount
-      = text_field_tag :amount, nil, :autofocus => true
-      = radio_button_tag :transaction_type, 'withdrawal', :checked => true
-      = label_tag :transaction_type, 'withdrawal'
-      = radio_button_tag :transaction_type, 'deposit'
-      = label_tag :transaction_type, 'deposit'
-      = submit_tag nil, :class => 'button success'
-      = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
+    .custom
+      = form_for @transaction, :remote => true do |f|
+        = f.label :amount
+        = f.text_field :amount, :autofocus => true
+        %span.custom.radio
+          = f.radio_button :transaction_type, 'withdrawal', :checked => true
+          = f.label :transaction_type, 'withdrawal'
+          = f.radio_button :transaction_type, 'deposit'
+          = f.label :transaction_type, 'deposit'
+        = f.submit :class => 'button success'
+        = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
   .large-3.columns
