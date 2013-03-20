@@ -11,9 +11,9 @@ Checkmate::Application.routes.draw do
     collection do
       get :transfer
       post :xfer
+      post :user_xfer
     end
     member do
-      post :user_xfer
       get :new_transaction
     end
   end

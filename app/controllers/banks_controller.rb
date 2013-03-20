@@ -25,7 +25,6 @@ class BanksController < ApplicationController
   end
 
   def user_xfer
-    binding.pry
     amount = params[:amount].to_f
     if params[:transaction_type] == 'withdrawal'
       bank = Bank.find(params[:bank_id])

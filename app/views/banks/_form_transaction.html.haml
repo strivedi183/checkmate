@@ -1,6 +1,6 @@
 .row
   .large-9.columns
-    = form_tag '/banks/:id/user_xfer', :remote => true do
+    = form_tag '/banks/user_xfer', :remote => true do
       = label_tag :amount
       = text_field_tag :amount, nil, :autofocus => true
       = radio_button_tag :transaction_type, 'withdrawal', :checked => true
