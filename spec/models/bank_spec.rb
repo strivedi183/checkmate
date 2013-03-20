@@ -26,5 +26,9 @@ describe Bank do
       bank = Bank.create(name: 'chase', balance: 'one thousand')
       expect(bank.id).to be nil
     end
+    it 'creates a bank instance' do
+      bank = Bank.create(name: 'chase', balance: '1000')
+      expect(bank).to be_an_instance_of(Bank)
+    end
   end
 end

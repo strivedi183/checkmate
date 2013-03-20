@@ -1,0 +1,13 @@
+.row
+  .large-9.columns
+    = form_tag '/banks/user_xfer', :remote => true do
+      = label_tag :amount
+      = text_field_tag :amount, nil, :autofocus => true
+      = radio_button_tag :transaction_type, 'withdrawal', :checked => true
+      = label_tag :transaction_type, 'withdrawal'
+      = radio_button_tag :transaction_type, 'deposit'
+      = label_tag :transaction_type, 'deposit'
+      = hidden_field_tag :bank_id, @bank.id
+      = submit_tag nil, :class => 'button success'
+      = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button radius alert'
+  .large-3.columns

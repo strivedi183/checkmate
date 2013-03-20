@@ -14,8 +14,8 @@
 
 FactoryGirl.define do
   factory :user, class: User do
-    name                     'user'
-    email                    'user@gmail.com'
+    name                     'user1'
+    email                    'user1@gmail.com'
     password                 'a'
     password_confirmation    'a'
     balance                  500
