@@ -30,17 +30,17 @@ class BanksController < ApplicationController
   def user_xfer
     amount = params[:amount].to_f
     if params[:transaction_type] == 'withdrawal'
-      bank = Bank.find(params[:bank_id])
+      @bank = Bank.find(params[:bank_id])
       transaction = Transaction.create(amount: amount, transaction_type: params[:transaction_type])
-      bank.balance -= amount
-      bank.save
-      bank.transactions << transaction
+      @bank.balance -= amount
+      @bank.save
+      @bank.transactions << transaction
     elsif params[:transaction_type] == 'deposit'
-      bank = Bank.find(params[:bank_id])
+      @bank = Bank.find(params[:bank_id])
       transaction = Transaction.create(amount: amount, transaction_type: params[:transaction_type])
-      bank.balance += amount
-      bank.save
-      bank.transactions << transaction
+      @bank.balance += amount
+      @bank.save
+      @bank.transactions << transaction
     else
     end
   end
